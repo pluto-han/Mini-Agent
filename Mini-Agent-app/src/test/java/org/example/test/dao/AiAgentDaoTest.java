@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * AI智能体配置表 DAO 测试
- * @author bugstack虫洞栈
+ * @author Hancong Zhang
  * @description AI智能体配置表数据访问对象测试
  */
 @Slf4j

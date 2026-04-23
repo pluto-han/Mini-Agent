@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * AI智能体配置表 DAO
- * @author bugstack虫洞栈
+ * @author Hancong Zhang
  * @description AI智能体配置表数据访问对象
  */
 @Mapper

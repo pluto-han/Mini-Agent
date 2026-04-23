@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * 智能体-客户端关联表 DAO 测试
- * @author bugstack虫洞栈
+ * @author Hancong Zhang
  * @description 智能体-客户端关联表数据访问对象测试
  */
 @Slf4j

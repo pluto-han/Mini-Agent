@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 智能体任务调度配置表 DAO
- * @author bugstack虫洞栈
+ * @author Hancong Zhang
  * @description 智能体任务调度配置表数据访问对象
  */
 @Mapper
