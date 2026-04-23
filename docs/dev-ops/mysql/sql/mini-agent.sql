@@ -6,7 +6,7 @@
 # https://github.com/Sequel-Ace/Sequel-Ace
 #
 # 主机: 127.0.0.1 (MySQL 8.0.42)
-# 数据库: ai-agent-station-study
+# 数据库: ai-agent
 # 生成时间: 2025-06-14 07:20:19 +0000
 # ************************************************************
 
@@ -19,8 +19,8 @@ SET NAMES utf8mb4;
 /*!40101 SET @OLD_SQL_MODE='NO_AUTO_VALUE_ON_ZERO', SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-CREATE database if NOT EXISTS `ai-agent-station` default character set utf8mb4 collate utf8mb4_0900_ai_ci;
-use `ai-agent-station-study`;
+CREATE database if NOT EXISTS `ai-agent` default character set utf8mb4 collate utf8mb4_0900_ai_ci;
+use `ai-agent`;
 
 # 转储表 ai_agent
 # ------------------------------------------------------------

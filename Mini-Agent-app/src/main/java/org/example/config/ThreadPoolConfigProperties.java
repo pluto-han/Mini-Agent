@@ -1,9 +1,7 @@
 package org.example.config;
 
-import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@Data
 @ConfigurationProperties(prefix = "thread.pool.executor.config", ignoreInvalidFields = true)
 public class ThreadPoolConfigProperties {
 
@@ -22,5 +20,45 @@ public class ThreadPoolConfigProperties {
      * CallerRunsPolicy：如果任务添加线程池失败，那么主线程自己执行该任务
      * */
     private String policy = "AbortPolicy";
+
+    public Integer getCorePoolSize() {
+        return corePoolSize;
+    }
+
+    public void setCorePoolSize(Integer corePoolSize) {
+        this.corePoolSize = corePoolSize;
+    }
+
+    public Integer getMaxPoolSize() {
+        return maxPoolSize;
+    }
+
+    public void setMaxPoolSize(Integer maxPoolSize) {
+        this.maxPoolSize = maxPoolSize;
+    }
+
+    public Long getKeepAliveTime() {
+        return keepAliveTime;
+    }
+
+    public void setKeepAliveTime(Long keepAliveTime) {
+        this.keepAliveTime = keepAliveTime;
+    }
+
+    public Integer getBlockQueueSize() {
+        return blockQueueSize;
+    }
+
+    public void setBlockQueueSize(Integer blockQueueSize) {
+        this.blockQueueSize = blockQueueSize;
+    }
+
+    public String getPolicy() {
+        return policy;
+    }
+
+    public void setPolicy(String policy) {
+        this.policy = policy;
+    }
 
 }
