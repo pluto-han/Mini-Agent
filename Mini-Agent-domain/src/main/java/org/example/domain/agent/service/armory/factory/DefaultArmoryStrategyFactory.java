@@ -1,9 +1,12 @@
 package org.example.domain.agent.service.armory.factory;
 
+import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.domain.agent.model.entity.ArmoryCommandEntity;
+import org.example.domain.agent.service.armory.RootNode;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -17,6 +20,15 @@ import java.util.Map;
  */
 @Service
 public class DefaultArmoryStrategyFactory {
+    private final RootNode rootNode;
+
+    public DefaultArmoryStrategyFactory(RootNode rootNode) {
+        this.rootNode = rootNode;
+    }
+
+    public StrategyHandler<ArmoryCommandEntity, DynamicContext, String> armoryStrategyHandler(){
+        return rootNode;
+    }
 
     @Data
     @Builder
