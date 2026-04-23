@@ -1,0 +1,5 @@
+spring:
+  config:
+    name: Mini-Agent-app
+  profiles:
+    active: dev
