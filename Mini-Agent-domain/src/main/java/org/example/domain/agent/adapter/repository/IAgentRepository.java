@@ -3,6 +3,7 @@ package org.example.domain.agent.adapter.repository;
 import org.example.domain.agent.model.valobj.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * AiAgent 仓储接口
@@ -13,6 +14,8 @@ import java.util.List;
 public interface IAgentRepository {
 
     List<AiClientApiVO> queryAiClientApiVOListByClientIds(List<String> clientIdList);
+
+    Map<String, AiClientSystemPromptVO> queryAiClientSystemPromptMapByClientIds(List<String> clientIdList);
 
     List<AiClientModelVO> AiClientModelVOByClientIds(List<String> clientIdList);
 
