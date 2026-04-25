@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
  * OpenAI API配置，值对象
  *
  * @author Hancong Zhang
- * 2026/4/23
  */
 @Data
 @Builder

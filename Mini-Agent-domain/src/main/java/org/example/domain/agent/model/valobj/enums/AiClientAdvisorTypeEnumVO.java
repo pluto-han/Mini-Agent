@@ -18,7 +18,6 @@ import java.util.Map;
  * 顾问类型枚举
  *
  * @author Hancong Zhang
- * 2025/7/19 09:02
  */
 @Getter
 @AllArgsConstructor

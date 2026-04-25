@@ -13,8 +13,7 @@ import org.springframework.stereotype.Service;
 /**
  * 精准执行节点
  *
- * @author xiaofuge bugstack.cn @小傅哥
- * 2025/7/27 16:42
+ * @author Hancong Zhang
  */
 @Slf4j
 @Service

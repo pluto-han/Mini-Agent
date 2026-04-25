@@ -11,7 +11,6 @@ import java.util.List;
  * 数据加载策略
  *
  * @author Hancong Zhang
- * 2026/4/23
  */
 public interface ILoadDataStrategy {
 

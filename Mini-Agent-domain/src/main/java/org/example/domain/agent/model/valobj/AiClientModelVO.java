@@ -10,7 +10,6 @@ import java.util.List;
 /**
  * 聊天模型配置，值对象
  * @author Hancong Zhang
- * 2026/4/23
  */
 @Data
 @Builder

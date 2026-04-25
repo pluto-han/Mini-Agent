@@ -16,7 +16,6 @@ import java.util.Map;
  * 工厂类
  *
  * @author Hancong Zhang
- * 2026/4/23
  */
 @Service
 public class DefaultArmoryStrategyFactory {

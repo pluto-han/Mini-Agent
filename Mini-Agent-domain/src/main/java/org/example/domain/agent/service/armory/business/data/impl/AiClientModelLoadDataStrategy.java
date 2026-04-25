@@ -17,7 +17,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 /**
  * 以客户端对话模型，加载数据策略
  * @author Hancong Zhang
- * 2026/4/24
  */
 @Slf4j
 @Service("aiClientModelLoadDataStrategy")
