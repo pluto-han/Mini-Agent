@@ -1,10 +1,10 @@
 
 
-package org.example.domain.agent.service.execute.factory;
+package org.example.domain.agent.service.execute.auto.step.factory;
 
 import org.example.domain.agent.model.entity.ExecuteCommandEntity;
 import org.example.domain.agent.model.valobj.AiAgentClientFlowConfigVO;
-import org.example.domain.agent.service.execute.RootNode;
+import org.example.domain.agent.service.execute.auto.step.RootNode;
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,15 +22,15 @@ import java.util.Map;
  * 2025/7/27 16:34
  */
 @Service
-public class DefaultExecuteStrategyFactory {
+public class DefaultAutoAgentExecuteStrategyFactory {
 
     private final RootNode executeRootNode;
 
-    public DefaultExecuteStrategyFactory(RootNode executeRootNode) {
+    public DefaultAutoAgentExecuteStrategyFactory(RootNode executeRootNode) {
         this.executeRootNode = executeRootNode;
     }
 
-    public StrategyHandler<ExecuteCommandEntity, DefaultExecuteStrategyFactory.DynamicContext, String> armoryStrategyHandler(){
+    public StrategyHandler<ExecuteCommandEntity, DefaultAutoAgentExecuteStrategyFactory.DynamicContext, String> armoryStrategyHandler(){
         return executeRootNode;
     }
 

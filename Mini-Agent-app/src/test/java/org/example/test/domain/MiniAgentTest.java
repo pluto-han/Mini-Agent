@@ -4,7 +4,7 @@ import org.example.domain.agent.model.entity.ArmoryCommandEntity;
 import org.example.domain.agent.model.entity.ExecuteCommandEntity;
 import org.example.domain.agent.model.valobj.enums.AiAgentEnumVO;
 import org.example.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
-import org.example.domain.agent.service.execute.factory.DefaultExecuteStrategyFactory;
+import org.example.domain.agent.service.execute.auto.step.factory.DefaultAutoAgentExecuteStrategyFactory;
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -12,8 +12,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.chat.messages.UserMessage;
-import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -33,7 +31,7 @@ public class MiniAgentTest {
     private DefaultArmoryStrategyFactory defaultArmoryStrategyFactory;
 
     @Resource
-    private DefaultExecuteStrategyFactory defaultExecuteStrategyFactory;
+    private DefaultAutoAgentExecuteStrategyFactory defaultAutoAgentExecuteStrategyFactory;
 
     @Resource
     private ApplicationContext applicationContext;
@@ -56,8 +54,8 @@ public class MiniAgentTest {
 
     @Test
     public void autoAgent() throws Exception {
-        StrategyHandler<ExecuteCommandEntity, DefaultExecuteStrategyFactory.DynamicContext, String> executeHandler
-                = defaultExecuteStrategyFactory.armoryStrategyHandler();
+        StrategyHandler<ExecuteCommandEntity, DefaultAutoAgentExecuteStrategyFactory.DynamicContext, String> executeHandler
+                = defaultAutoAgentExecuteStrategyFactory.armoryStrategyHandler();
 
         ExecuteCommandEntity executeCommandEntity = new ExecuteCommandEntity();
         executeCommandEntity.setAiAgentId("3");
@@ -65,7 +63,7 @@ public class MiniAgentTest {
         executeCommandEntity.setSessionId("session-id-" + System.currentTimeMillis());
         executeCommandEntity.setMaxStep(3);
 
-        String apply = executeHandler.apply(executeCommandEntity, new DefaultExecuteStrategyFactory.DynamicContext());
+        String apply = executeHandler.apply(executeCommandEntity, new DefaultAutoAgentExecuteStrategyFactory.DynamicContext());
         log.info("测试结果:{}", apply);
     }
 

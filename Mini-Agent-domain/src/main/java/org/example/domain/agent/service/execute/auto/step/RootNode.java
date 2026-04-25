@@ -1,8 +1,8 @@
-package org.example.domain.agent.service.execute;
+package org.example.domain.agent.service.execute.auto.step;
 
 import org.example.domain.agent.model.entity.ExecuteCommandEntity;
 import org.example.domain.agent.model.valobj.AiAgentClientFlowConfigVO;
-import org.example.domain.agent.service.execute.factory.DefaultExecuteStrategyFactory;
+import org.example.domain.agent.service.execute.auto.step.factory.DefaultAutoAgentExecuteStrategyFactory;
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -24,7 +24,7 @@ public class RootNode extends AbstractExecuteSupport {
     private Step1AnalyzerNode step1AnalyzerNode;
 
     @Override
-    protected String doApply(ExecuteCommandEntity requestParameter, DefaultExecuteStrategyFactory.DynamicContext dynamicContext) throws Exception {
+    protected String doApply(ExecuteCommandEntity requestParameter, DefaultAutoAgentExecuteStrategyFactory.DynamicContext dynamicContext) throws Exception {
         log.info("=== 动态多轮执行测试开始 ====");
         log.info("用户输入: {}", requestParameter.getMessage());
         log.info("最大执行步数: {}", requestParameter.getMaxStep());
@@ -45,7 +45,7 @@ public class RootNode extends AbstractExecuteSupport {
     }
 
     @Override
-    public StrategyHandler<ExecuteCommandEntity, DefaultExecuteStrategyFactory.DynamicContext, String> get(ExecuteCommandEntity requestParameter, DefaultExecuteStrategyFactory.DynamicContext dynamicContext) throws Exception {
+    public StrategyHandler<ExecuteCommandEntity, DefaultAutoAgentExecuteStrategyFactory.DynamicContext, String> get(ExecuteCommandEntity requestParameter, DefaultAutoAgentExecuteStrategyFactory.DynamicContext dynamicContext) throws Exception {
         return step1AnalyzerNode;
     }
 
