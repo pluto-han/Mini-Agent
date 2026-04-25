@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.domain.agent.model.valobj.AiAgentEnumVO;
+import org.example.domain.agent.model.valobj.enums.AiAgentEnumVO;
 
 import java.util.List;
 

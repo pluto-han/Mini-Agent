@@ -34,7 +34,7 @@ spring:
       driver-class-name: org.postgresql.Driver
       username: postgres
       password: postgres
-      url: jdbc:postgresql://192.168.1.108:15432/ai-rag-knowledge
+      url: jdbc:postgresql://localhost:5432/springai
       type: com.zaxxer.hikari.HikariDataSource
       hikari:
         maximum-pool-size: 5
@@ -43,7 +43,7 @@ spring:
         connection-timeout: 30000
   ai:
     openai:
-      base-url: https://api.openai.com
+      base-url: https://api.aaai.vip
       api-key: ${OPENAI_API_KEY:xxx}
 
 # 日志

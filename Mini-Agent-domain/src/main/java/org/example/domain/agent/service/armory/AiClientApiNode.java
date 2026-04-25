@@ -2,13 +2,12 @@ package org.example.domain.agent.service.armory;
 
 import jakarta.annotation.Resource;
 import org.example.domain.agent.model.entity.ArmoryCommandEntity;
-import org.example.domain.agent.model.valobj.AiAgentEnumVO;
+import org.example.domain.agent.model.valobj.enums.AiAgentEnumVO;
 import org.example.domain.agent.model.valobj.AiClientApiVO;
 import org.example.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.ai.openai.api.OpenAiApi;
 import org.springframework.stereotype.Service;
 

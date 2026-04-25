@@ -1,7 +1,7 @@
 package org.example.domain.agent.service.armory;
 
 import org.example.domain.agent.model.entity.ArmoryCommandEntity;
-import org.example.domain.agent.model.valobj.AiAgentEnumVO;
+import org.example.domain.agent.model.valobj.enums.AiAgentEnumVO;
 import org.example.domain.agent.model.valobj.AiClientSystemPromptVO;
 import org.example.domain.agent.model.valobj.AiClientVO;
 import org.example.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
@@ -22,7 +22,7 @@ import java.util.Map;
 /**
  * ai agent 客户端对话对象节点
  *
- * @author xiaofuge bugstack.cn @小傅哥
+ * @author Hancong Zhang
  * 2025/7/19 09:17
  */
 @Slf4j

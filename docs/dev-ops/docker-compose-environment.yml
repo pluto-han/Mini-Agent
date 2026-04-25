@@ -87,20 +87,15 @@ services:
     container_name: vector_db
     restart: always
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=springai
-      - PGPASSWORD=postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: springai
     volumes:
       - ./pgvector/sql/init.sql:/docker-entrypoint-initdb.d/init.sql
-    logging:
-      options:
-        max-size: 10m
-        max-file: "3"
     ports:
-      - '5432:5432'
+      - "5432:5432"
     healthcheck:
-      test: "pg_isready -U postgres -d vector_store"
+      test: ["CMD-SHELL", "pg_isready -U postgres -d springai"]
       interval: 2s
       timeout: 20s
       retries: 10

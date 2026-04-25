@@ -1,8 +1,8 @@
 package org.example.domain.agent.service.armory;
 
 import org.example.domain.agent.model.entity.ArmoryCommandEntity;
-import org.example.domain.agent.model.valobj.AiAgentEnumVO;
-import org.example.domain.agent.model.valobj.AiClientAdvisorTypeEnumVO;
+import org.example.domain.agent.model.valobj.enums.AiAgentEnumVO;
+import org.example.domain.agent.model.valobj.enums.AiClientAdvisorTypeEnumVO;
 import org.example.domain.agent.model.valobj.AiClientAdvisorVO;
 import org.example.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * 顾问角色节点
  *
- * @author xiaofuge bugstack.cn @小傅哥
+ * @author Hancong Zhang
  * 2025/7/19 08:51
  */
 @Slf4j

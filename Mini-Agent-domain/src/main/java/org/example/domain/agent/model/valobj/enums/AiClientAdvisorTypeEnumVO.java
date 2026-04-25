@@ -1,4 +1,4 @@
-package org.example.domain.agent.model.valobj;
+package org.example.domain.agent.model.valobj.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * 顾问类型枚举
  *
- * @author xiaofuge bugstack.cn @小傅哥
+ * @author Hancong Zhang
  * 2025/7/19 09:02
  */
 @Getter
